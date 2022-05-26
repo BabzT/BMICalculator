@@ -4,7 +4,7 @@ document.getElementById("calculate").addEventListener("click",
 
 function Calculate(Num) {
     document.getElementById("bmi").style.display = "block"
-    let height = document.getElementById("height").value;
+    let height = document.getElementById("height").value/100;
     let weight = document.getElementById("weight").value;
     let bmi = weight/(height*height);
     document.getElementById("result").innerHTML = bmi.toFixed(2);
