@@ -9,8 +9,14 @@ function Calculate(Num) {
     let bmi = weight/(height*height);
     document.getElementById("result").innerHTML = bmi.toFixed(2);
     let advice = document.getElementById("comment");
-
-    if (bmi < 18.5) {
+    
+    if (height == 0 && weight == 0) {
+        document.getElementById("result").innerHTML = "Empty"
+        document.getElementById("result").style.color = "red";
+        advice.innerHTML = "Enter Valid Inputs."
+        advice.style.color = "red"
+    }
+    else if (bmi < 18.5) {
         advice.innerHTML = "You are Underweighed"
         advice.style.color = "red"
     }
@@ -22,7 +28,7 @@ function Calculate(Num) {
         advice.innerHTML = "You are OverWeighed"
         advice.style.color = "darkred"
     }
-    else{
+    else if (bmi > 30){
         advice.innerHTML = "You are Obesed"
         advice.style.color = "red"
     }
