@@ -115,10 +115,10 @@ body{
 @media screen and (max-width: 960px){
     #container{
         width: 90%;
-        height: 90%;
+        height: 80%;
     }
 
-    .section2{
+    /* .section2{
         height: 30%;
-    }
+    } */
 }
