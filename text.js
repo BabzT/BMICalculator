@@ -9,8 +9,8 @@ function Calculate(Num) {
     let bmi = weight/(height*height);
     document.getElementById("result").innerHTML = bmi.toFixed(2);
     let advice = document.getElementById("comment");
-    
-    if (height == 0 && weight == 0) {
+
+    if (isNaN(bmi)) {
         document.getElementById("result").innerHTML = "Empty"
         document.getElementById("result").style.color = "red";
         advice.innerHTML = "Enter Valid Inputs."
